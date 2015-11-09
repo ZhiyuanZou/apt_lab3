@@ -1,6 +1,2 @@
-# needed when adding to Jenkins:
-# cd python/jenkins-testing
-PYTHONPATH=''
-nosetests --with-xunit --all-modules --traverse-namespace --with-coverage --cover-package=./ --cover-inclusive
-python -m coverage xml --include=./*
-pylint -f parseable -d I0011,R0801 *.py | tee pylint.out
+python2.7 -m nose --with-xunit --all-modules --traverse-namespace --with-coverage --cover-package=project --cover-inclusive
+python -m coverage xml --include=project*
